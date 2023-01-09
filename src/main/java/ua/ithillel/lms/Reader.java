@@ -1,9 +1,11 @@
 package ua.ithillel.lms;
 
-import java.io.IOException;
+import lombok.Getter;
 
 public abstract class Reader {
+
   protected String filePath;
 
+  @Getter
   protected String fileData;
 }

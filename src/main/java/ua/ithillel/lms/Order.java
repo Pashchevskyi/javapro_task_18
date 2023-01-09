@@ -9,18 +9,16 @@ import ua.ithillel.lms.api.Importable;
 
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
+@Setter
 public class Order implements Exportable, Importable {
-  @Getter
-  @Setter
+
   private String shopName;
-  @Getter
-  @Setter
+
   private String wareName;
-  @Getter
-  @Setter
+
   private double price;
-  @Getter
-  @Setter
+
   private int quantity;
 
   @Override

@@ -43,3 +43,5 @@ downloads/*
 !downloads/.gitkeep
 uploads/*
 !uploads/.gitkeep
+src/test/resources/*
+!src/test/resources/.gitkeep

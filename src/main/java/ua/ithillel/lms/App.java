@@ -13,7 +13,7 @@ public class App {
     System.out.println("Hello World!");
     try {
       Reader reader = new CSVReader("./uploads/order_1.csv");
-      System.out.println(reader.fileData);
+      System.out.println(reader.getFileData());
       System.out.println("Parsing...");
       Parser parser = new CSVParser((CSVReader) reader);
       String[][] parsedData = parser.parse();

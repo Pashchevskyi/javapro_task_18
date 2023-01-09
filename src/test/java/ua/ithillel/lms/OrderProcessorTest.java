@@ -13,19 +13,20 @@ public class OrderProcessorTest {
 
   @BeforeEach
   public void deleteGeneratedFiles() {
-    File fileAuchan = new File("./downloads/Auchan.csv");
+    File fileAuchan = new File("./src/test/resources/Auchan.csv");
     if (fileAuchan.isFile()) {
       fileAuchan.delete();
     }
-    File fileFora = new File("./downloads/Fora.csv");
+    File fileFora = new File("./src/test/resources/Fora.csv");
     if (fileFora.isFile()) {
       fileFora.delete();
     }
-    File fileSummary = new File("./downloads/summary.csv");
+    File fileSummary = new File("./src/test/resources/summary.csv");
     if (fileSummary.isFile()) {
       fileSummary.delete();
     }
   }
+
   @Test
   public void testSplitByShops() {
     System.out.println("testing of splitByShops() method");
@@ -35,7 +36,8 @@ public class OrderProcessorTest {
         "ИМЯ;НАИМЕНОВАНИЕ;ЦЕНА;ШТ\nAuchan;Chocolate;30.91;2\nFora;Coca-Cola;40.57;1\n"
             + "Fora;Chocolate;15.45;3;");
     CSVParser[] parsers = {Mockito.mock(CSVParser.class)};
-    String[][] parsedData = {{"Auchan","Chocolate","30.91","2"}, {"Fora","Coca-Cola","40.57","1"},
+    String[][] parsedData = {{"Auchan", "Chocolate", "30.91", "2"},
+        {"Fora", "Coca-Cola", "40.57", "1"},
         {"Fora", "Chocolate", "15.45", "3"}};
     Mockito.when(parsers[0].parse()).thenReturn(parsedData);
 
@@ -57,7 +59,8 @@ public class OrderProcessorTest {
         "ИМЯ;НАИМЕНОВАНИЕ;ЦЕНА;ШТ\nAuchan;Chocolate;30.91;2\nFora;Coca-Cola;40.57;1\n"
             + "Fora;Chocolate;15.45;3;");
     CSVParser[] parsers = {Mockito.mock(CSVParser.class)};
-    String[][] parsedData = {{"Auchan","Chocolate","30.91","2"}, {"Fora","Coca-Cola","40.57","1"},
+    String[][] parsedData = {{"Auchan", "Chocolate", "30.91", "2"},
+        {"Fora", "Coca-Cola", "40.57", "1"},
         {"Fora", "Chocolate", "15.45", "3"}};
     Mockito.when(parsers[0].parse()).thenReturn(parsedData);
 

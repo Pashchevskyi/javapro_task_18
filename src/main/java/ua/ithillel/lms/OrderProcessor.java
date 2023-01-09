@@ -26,6 +26,7 @@ public class OrderProcessor {
       }
     }
   }
+
   public Map<String, List<Order>> splitByShops() throws IOException {
     Map<String, List<Order>> ordersPerShop = Arrays.stream(orders).collect(
         Collectors.groupingBy(Order::getShopName));
